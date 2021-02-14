@@ -1,0 +1,299 @@
+2021-02-13 23:02:44
+threadNum:4 port:8080 logPath:/home/wwh/Documents/WebServerProjects/WebServer/log/WebServer.log -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Main.cpp:40
+2021-02-13 23:02:44
+1678 Epoll create, epollFd_ = 4 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:25
+2021-02-13 23:02:44
+1678 loop_'s tid = 1678 Channel constructed fd_ = 5 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Channel.cpp:23
+2021-02-13 23:02:44
+1678 eventloop create threadId_ = 1678 wakeupFd_ = 5 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.cpp:40
+2021-02-13 23:02:44
+1678 Epoll::epoll_add, epollFd_ = 4 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:33
+2021-02-13 23:02:44
+1678 EventLoopThreadPool create -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoopThreadPool.cpp:5
+2021-02-13 23:02:44
+1678 loop_'s tid = 1678 Channel constructed fd_ = 0 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Channel.cpp:17
+2021-02-13 23:02:44
+Sever constructed, acceptChannel_'s fd = 6 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Server.cpp:18
+2021-02-13 23:02:44
+1678 Server::start() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Server.cpp:27
+2021-02-13 23:02:44
+1678 EventLoopThreadPool::start() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoopThreadPool.cpp:13
+2021-02-13 23:02:44
+1678 EventLoopThread create -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoopThread.cpp:10
+2021-02-13 23:02:44
+1678 EventLoopThread::startLoop() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoopThread.cpp:24
+2021-02-13 23:02:44
+1694 EventLoopThread::threadFunc() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoopThread.cpp:36
+2021-02-13 23:02:44
+1694 Epoll create, epollFd_ = 7 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:25
+2021-02-13 23:02:44
+1694 loop_'s tid = 1694 Channel constructed fd_ = 8 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Channel.cpp:23
+2021-02-13 23:02:44
+1694 eventloop create threadId_ = 1694 wakeupFd_ = 8 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.cpp:40
+2021-02-13 23:02:44
+1694 Epoll::epoll_add, epollFd_ = 7 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:33
+2021-02-13 23:02:44
+loop's tid = 1694 current tid = 1694 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoopThread.cpp:38
+2021-02-13 23:02:44
+1694 wakeupFd_ = 8 threadId_ = 1694 EventLoop::loop() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.cpp:108
+2021-02-13 23:02:44
+1678 loop_'s tid = 1694 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoopThread.cpp:31
+2021-02-13 23:02:44
+1694 EventLoop::loop() doing, threadId_ = 1694 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.cpp:116
+2021-02-13 23:02:44
+1678 EventLoopThread create -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoopThread.cpp:10
+2021-02-13 23:02:44
+1694 Epoll::poll(), epollFd_ = 7 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:87
+2021-02-13 23:02:44
+1678 EventLoopThread::startLoop() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoopThread.cpp:24
+2021-02-13 23:02:44
+1695 EventLoopThread::threadFunc() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoopThread.cpp:36
+2021-02-13 23:02:44
+1695 Epoll create, epollFd_ = 9 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:25
+2021-02-13 23:02:44
+1695 loop_'s tid = 1695 Channel constructed fd_ = 10 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Channel.cpp:23
+2021-02-13 23:02:44
+1695 eventloop create threadId_ = 1695 wakeupFd_ = 10 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.cpp:40
+2021-02-13 23:02:44
+1695 Epoll::epoll_add, epollFd_ = 9 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:33
+2021-02-13 23:02:44
+loop's tid = 1695 current tid = 1695 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoopThread.cpp:38
+2021-02-13 23:02:44
+1695 wakeupFd_ = 10 threadId_ = 1695 EventLoop::loop() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.cpp:108
+2021-02-13 23:02:44
+1695 EventLoop::loop() doing, threadId_ = 1695 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.cpp:116
+2021-02-13 23:02:44
+1695 Epoll::poll(), epollFd_ = 9 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:87
+2021-02-13 23:02:44
+1678 loop_'s tid = 1695 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoopThread.cpp:31
+2021-02-13 23:02:44
+1678 EventLoopThread create -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoopThread.cpp:10
+2021-02-13 23:02:44
+1678 EventLoopThread::startLoop() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoopThread.cpp:24
+2021-02-13 23:02:44
+1696 EventLoopThread::threadFunc() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoopThread.cpp:36
+2021-02-13 23:02:44
+1696 Epoll create, epollFd_ = 11 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:25
+2021-02-13 23:02:44
+1696 loop_'s tid = 1696 Channel constructed fd_ = 12 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Channel.cpp:23
+2021-02-13 23:02:44
+1696 eventloop create threadId_ = 1696 wakeupFd_ = 12 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.cpp:40
+2021-02-13 23:02:44
+1696 Epoll::epoll_add, epollFd_ = 11 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:33
+2021-02-13 23:02:44
+loop's tid = 1696 current tid = 1696 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoopThread.cpp:38
+2021-02-13 23:02:44
+1696 wakeupFd_ = 12 threadId_ = 1696 EventLoop::loop() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.cpp:108
+2021-02-13 23:02:44
+1678 loop_'s tid = 1696 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoopThread.cpp:31
+2021-02-13 23:02:44
+1696 EventLoop::loop() doing, threadId_ = 1696 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.cpp:116
+2021-02-13 23:02:44
+1678 EventLoopThread create -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoopThread.cpp:10
+2021-02-13 23:02:44
+1696 Epoll::poll(), epollFd_ = 11 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:87
+2021-02-13 23:02:44
+1678 EventLoopThread::startLoop() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoopThread.cpp:24
+2021-02-13 23:02:44
+1697 EventLoopThread::threadFunc() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoopThread.cpp:36
+2021-02-13 23:02:44
+1697 Epoll create, epollFd_ = 13 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:25
+2021-02-13 23:02:44
+1697 loop_'s tid = 1697 Channel constructed fd_ = 14 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Channel.cpp:23
+2021-02-13 23:02:44
+1697 eventloop create threadId_ = 1697 wakeupFd_ = 14 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.cpp:40
+2021-02-13 23:02:44
+1697 Epoll::epoll_add, epollFd_ = 13 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:33
+2021-02-13 23:02:44
+loop's tid = 1697 current tid = 1697 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoopThread.cpp:38
+2021-02-13 23:02:44
+1697 wakeupFd_ = 14 threadId_ = 1697 EventLoop::loop() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.cpp:108
+2021-02-13 23:02:44
+1697 EventLoop::loop() doing, threadId_ = 1697 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.cpp:116
+2021-02-13 23:02:44
+1697 Epoll::poll(), epollFd_ = 13 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:87
+2021-02-13 23:02:44
+1678 loop_'s tid = 1697 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoopThread.cpp:31
+2021-02-13 23:02:44
+1678 wakeupFd_ = 5 threadId_ = 1678 EventLoop::addToPoller -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.h:44
+2021-02-13 23:02:44
+1678 Epoll::epoll_add, epollFd_ = 4 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:33
+2021-02-13 23:02:44
+1678 wakeupFd_ = 5 threadId_ = 1678 EventLoop::loop() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.cpp:108
+2021-02-13 23:02:44
+1678 EventLoop::loop() doing, threadId_ = 1678 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.cpp:116
+2021-02-13 23:02:44
+1678 Epoll::poll(), epollFd_ = 4 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:87
+2021-02-13 23:02:54
+1694 Epoll::getEventsRequest(), epollFd_ = 7 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:105
+2021-02-13 23:02:54
+1696 Epoll::getEventsRequest(), epollFd_ = 11 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:105
+2021-02-13 23:02:54
+1695 Epoll::getEventsRequest(), epollFd_ = 9 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:105
+2021-02-13 23:02:54
+1678 Epoll::getEventsRequest(), epollFd_ = 4 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:105
+2021-02-13 23:02:54
+1697 Epoll::getEventsRequest(), epollFd_ = 13 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:105
+2021-02-13 23:03:04
+1694 Epoll::getEventsRequest(), epollFd_ = 7 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:105
+2021-02-13 23:03:04
+1696 Epoll::getEventsRequest(), epollFd_ = 11 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:105
+2021-02-13 23:03:04
+1695 Epoll::getEventsRequest(), epollFd_ = 9 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:105
+2021-02-13 23:03:04
+1678 Epoll::getEventsRequest(), epollFd_ = 4 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:105
+2021-02-13 23:03:04
+1697 Epoll::getEventsRequest(), epollFd_ = 13 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:105
+2021-02-13 23:03:08
+1678 Epoll::getEventsRequest(), epollFd_ = 4 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:105
+2021-02-13 23:03:08
+1678 Channel::handleEvents() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Channel.h:61
+2021-02-13 23:03:08
+1678 handle read in Channel -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Channel.h:73
+2021-02-13 23:03:08
+1678 Channel::handleRead() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Channel.cpp:38
+2021-02-13 23:03:08
+1678 Server::handNewConn() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Server.cpp:38
+2021-02-13 23:03:08
+1678 EventLoopThreadPool::getNextLoop() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoopThreadPool.cpp:24
+2021-02-13 23:03:08
+New connection from 127.0.0.1:38166 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Server.cpp:46
+2021-02-13 23:03:08
+1678 loop_'s tid = 1694 Channel constructed fd_ = 15 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Channel.cpp:23
+2021-02-13 23:03:08
+1678 HttpData constructed, connfd = 15 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/HttpData.cpp:122
+2021-02-13 23:03:08
+1678 wakeupFd_ = 8 threadId_ = 1694 EventLoop::queueInLoop -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.cpp:97
+2021-02-13 23:03:08
+threadId_=1694 current thread: 1678callingPendingFunctors_=0 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.cpp:103
+2021-02-13 23:03:08
+1678 EventLoop::wakeup(), threadId_= 1694 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.cpp:69
+2021-02-13 23:03:08
+1694 Epoll::getEventsRequest(), epollFd_ = 7 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:105
+2021-02-13 23:03:08
+1678 Channel::handleConn() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Channel.cpp:52
+2021-02-13 23:03:08
+1694 Channel::handleEvents() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Channel.h:61
+2021-02-13 23:03:08
+1678 Server::handThisConn() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Server.h:17
+2021-02-13 23:03:08
+1694 handle read in Channel -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Channel.h:73
+2021-02-13 23:03:08
+1678 wakeupFd_ = 5 threadId_ = 1678 EventLoop::updatePoller -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.h:39
+2021-02-13 23:03:08
+1694 Channel::handleRead() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Channel.cpp:38
+2021-02-13 23:03:08
+1678Epoll::epoll_mod, epollFd_ = 4 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:54
+2021-02-13 23:03:08
+1694 EventLoop::handleRead(), threadId_ = 1694wakeupFd_ = 8 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.cpp:78
+2021-02-13 23:03:08
+1678 wakeupFd_ = 5 threadId_ = 1678 EventLoop::doPendingFunctors() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.cpp:130
+2021-02-13 23:03:08
+1694 Channel::handleConn() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Channel.cpp:52
+2021-02-13 23:03:08
+1678 Epoll::handleExpired(), epollFd_ = 4 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:99
+2021-02-13 23:03:08
+1694 wakeupFd_ = 8 threadId_ = 1694 EventLoop::handleConn -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.cpp:52
+2021-02-13 23:03:08
+1678 TimerManager::handleExpiredEvent() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Timer.cpp:73
+2021-02-13 23:03:08
+1694 wakeupFd_ = 8 threadId_ = 1694 EventLoop::updatePoller -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.h:39
+2021-02-13 23:03:08
+1678 EventLoop::loop() doing, threadId_ = 1678 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.cpp:116
+2021-02-13 23:03:08
+1694Epoll::epoll_mod, epollFd_ = 7 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:54
+2021-02-13 23:03:08
+1678 Epoll::poll(), epollFd_ = 4 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:87
+2021-02-13 23:03:08
+1694 wakeupFd_ = 8 threadId_ = 1694 EventLoop::doPendingFunctors() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.cpp:130
+2021-02-13 23:03:08
+1694 HttpData::newEvent() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/HttpData.cpp:612
+2021-02-13 23:03:08
+1694 wakeupFd_ = 8 threadId_ = 1694 EventLoop::addToPoller -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.h:44
+2021-02-13 23:03:08
+1694 Epoll::epoll_add, epollFd_ = 7 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:33
+2021-02-13 23:03:08
+1694 Epoll::add_timer(), epollFd_ = 7 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:127
+2021-02-13 23:03:08
+1694 TimerNode constructed -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Timer.cpp:10
+2021-02-13 23:03:08
+1694 Epoll::handleExpired(), epollFd_ = 7 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:99
+2021-02-13 23:03:08
+1694 TimerManager::handleExpiredEvent() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Timer.cpp:73
+2021-02-13 23:03:08
+1694 EventLoop::loop() doing, threadId_ = 1694 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.cpp:116
+2021-02-13 23:03:08
+1694 Epoll::poll(), epollFd_ = 7 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:87
+2021-02-13 23:03:08
+1694 Epoll::getEventsRequest(), epollFd_ = 7 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:105
+2021-02-13 23:03:08
+1694 Channel::handleEvents() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Channel.h:61
+2021-02-13 23:03:08
+1694 handle read in Channel -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Channel.h:73
+2021-02-13 23:03:08
+1694 Channel::handleRead() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Channel.cpp:38
+2021-02-13 23:03:08
+1694 HttpData::handleRead() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/HttpData.cpp:157
+2021-02-13 23:03:08
+Request: GET / HTTP/1.1
+Host: 127.0.0.1:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:85.0) Gecko/20100101 Firefox/85.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+ -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/HttpData.cpp:162
+2021-02-13 23:03:08
+1694 HttpData::handleWrite() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/HttpData.cpp:261
+2021-02-13 23:03:08
+1694 HttpData::reset() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/HttpData.cpp:130
+2021-02-13 23:03:08
+1694 Channel::handleConn() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Channel.cpp:52
+2021-02-13 23:03:08
+1694 HttpData::handleConn() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/HttpData.cpp:274
+2021-02-13 23:03:08
+1694 HttpData::seperateTimer() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/HttpData.cpp:147
+2021-02-13 23:03:08
+keepAlive is true, events_ |= in | ET -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/HttpData.cpp:292
+2021-02-13 23:03:08
+1694 wakeupFd_ = 8 threadId_ = 1694 EventLoop::updatePoller -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.h:39
+2021-02-13 23:03:08
+1694Epoll::epoll_mod, epollFd_ = 7 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:54
+2021-02-13 23:03:08
+1694 Epoll::add_timer(), epollFd_ = 7 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:127
+2021-02-13 23:03:08
+1694 TimerNode constructed -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Timer.cpp:10
+2021-02-13 23:03:08
+1694 wakeupFd_ = 8 threadId_ = 1694 EventLoop::doPendingFunctors() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.cpp:130
+2021-02-13 23:03:08
+1694 Epoll::handleExpired(), epollFd_ = 7 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:99
+2021-02-13 23:03:08
+1694 TimerManager::handleExpiredEvent() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Timer.cpp:73
+2021-02-13 23:03:08
+1694 TimerNode::~TimerNode() -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Timer.cpp:19
+2021-02-13 23:03:08
+1694 EventLoop::loop() doing, threadId_ = 1694 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/EventLoop.cpp:116
+2021-02-13 23:03:08
+1694 Epoll::poll(), epollFd_ = 7 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:87
+2021-02-13 23:03:14
+1695 Epoll::getEventsRequest(), epollFd_ = 9 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:105
+2021-02-13 23:03:14
+1696 Epoll::getEventsRequest(), epollFd_ = 11 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:105
+2021-02-13 23:03:14
+1697 Epoll::getEventsRequest(), epollFd_ = 13 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:105
+2021-02-13 23:03:18
+1678 Epoll::getEventsRequest(), epollFd_ = 4 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:105
+2021-02-13 23:03:18
+1694 Epoll::getEventsRequest(), epollFd_ = 7 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:105
+2021-02-13 23:03:24
+1695 Epoll::getEventsRequest(), epollFd_ = 9 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:105
+2021-02-13 23:03:24
+1696 Epoll::getEventsRequest(), epollFd_ = 11 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:105
+2021-02-13 23:03:24
+1697 Epoll::getEventsRequest(), epollFd_ = 13 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:105
+2021-02-13 23:03:28
+1678 Epoll::getEventsRequest(), epollFd_ = 4 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:105
+2021-02-13 23:03:28
+1694 Epoll::getEventsRequest(), epollFd_ = 7 -- /home/wwh/Documents/WebServerProjects/WebServer/WebServer/Epoll.cpp:105
