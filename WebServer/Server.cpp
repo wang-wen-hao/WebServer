@@ -31,6 +31,7 @@ void Server::start() {
   acceptChannel_->setReadHandler(bind(&Server::handNewConn, this));
   acceptChannel_->setConnHandler(bind(&Server::handThisConn, this));
   loop_->addToPoller(acceptChannel_, 0);
+  LOG << CurrentThread::tid() << " 纳入监管的fd = " << acceptChannel_->getFd();
   started_ = true;
 }
 
@@ -45,6 +46,7 @@ void Server::handNewConn() {
     EventLoop *loop = eventLoopThreadPool_->getNextLoop();
     LOG << "New connection from " << inet_ntoa(client_addr.sin_addr) << ":"
         << ntohs(client_addr.sin_port);
+    LOG << "accept_fd = " << accept_fd;
     /*
     // TCP的保活机制默认是关闭的
     int optval = 0;

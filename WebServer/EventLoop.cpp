@@ -44,6 +44,7 @@ EventLoop::EventLoop()
   pwakeupChannel_->setReadHandler(bind(&EventLoop::handleRead, this));
   pwakeupChannel_->setConnHandler(bind(&EventLoop::handleConn, this));
   poller_->epoll_add(pwakeupChannel_, 0);
+  LOG << CurrentThread::tid() << "纳入监管的fd = " << pwakeupChannel_->getFd();
 }
 
 void EventLoop::handleConn() {

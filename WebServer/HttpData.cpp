@@ -107,6 +107,7 @@ std::string MimeType::getMime(const std::string &suffix) {
     return mime[suffix];
 }
 
+// loop是sub EventLoop, fd是acceptfd
 HttpData::HttpData(EventLoop *loop, int connfd)
     : loop_(loop),
       channel_(new Channel(loop, connfd)),
@@ -120,7 +121,6 @@ HttpData::HttpData(EventLoop *loop, int connfd)
       hState_(H_START),
       keepAlive_(false) {
   LOG << CurrentThread::tid() << " HttpData constructed, connfd = " << fd_;
-  // loop_->queueInLoop(bind(&HttpData::setHandlers, this));
   channel_->setReadHandler(bind(&HttpData::handleRead, this));
   channel_->setWriteHandler(bind(&HttpData::handleWrite, this));
   channel_->setConnHandler(bind(&HttpData::handleConn, this));
@@ -249,7 +249,7 @@ void HttpData::handleRead() {
     // error_ may change
     if (!error_ && state_ == STATE_FINISH) {
       this->reset();
-      if (inBuffer_.size() > 0) { // 这就是ET模式要读完
+      if (inBuffer_.size() > 0) { // 这就是ET模式要读完吗?
         if (connectionState_ != H_DISCONNECTING) handleRead();
       }
     } else if (!error_ && connectionState_ != H_DISCONNECTED)

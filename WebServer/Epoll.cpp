@@ -107,7 +107,7 @@ std::vector<SP_Channel> Epoll::getEventsRequest(int events_num) {
   for (int i = 0; i < events_num; ++i) {
     // 获取有事件产生的描述符
     int fd = events_[i].data.fd;
-
+    LOG << CurrentThread::tid() << " 有事件产生的描述符为: fd = " << fd;
     SP_Channel cur_req = fd2chan_[fd];
 
     if (cur_req) {
