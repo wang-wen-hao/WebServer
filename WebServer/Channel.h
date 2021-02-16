@@ -58,7 +58,7 @@ class Channel {
   void setConnHandler(CallBack &&connHandler) { connHandler_ = connHandler; }
 
   void handleEvents() {
-    LOG << CurrentThread::tid() << " Channel::handleEvents()";
+    LOG << CurrentThread::tid() << " Channel::handleEvents(), fd = " << getFd();
     events_ = 0;
     if ((revents_ & EPOLLHUP) && !(revents_ & EPOLLIN)) {
       events_ = 0;

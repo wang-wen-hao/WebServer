@@ -31,7 +31,7 @@ class EventLoop {
   void shutdown(shared_ptr<Channel> channel) { shutDownWR(channel->getFd()); }
   void removeFromPoller(shared_ptr<Channel> channel) {
     LOG << CurrentThread::tid() << " wakeupFd_ = " << wakeupFd_ << " threadId_ = " << threadId_
-        << " EventLoop::removeFromPoller";
+        << " fd = " << channel->getFd() << " EventLoop::removeFromPoller";
     // shutDownWR(channel->getFd());
     poller_->epoll_del(channel);
   }
@@ -41,7 +41,7 @@ class EventLoop {
     poller_->epoll_mod(channel, timeout);
   }
   void addToPoller(shared_ptr<Channel> channel, int timeout = 0) {
-    LOG << CurrentThread::tid() << " wakeupFd_ = " << wakeupFd_ << " threadId_ = " << threadId_
+    LOG << CurrentThread::tid() << " wakeupFd_ = " << wakeupFd_ << "通道被纳入监管 fd = " << channel->getFd() << " threadId_ = " << threadId_
         << " EventLoop::addToPoller";
     poller_->epoll_add(channel, timeout);
   }

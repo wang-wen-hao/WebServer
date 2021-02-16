@@ -30,7 +30,8 @@ Epoll::~Epoll() {
 
 // 注册新描述符
 void Epoll::epoll_add(SP_Channel request, int timeout) {
-  LOG << CurrentThread::tid() << " Epoll::epoll_add, epollFd_ = " << epollFd_;
+  LOG << CurrentThread::tid() << " Epoll::epoll_add, epollFd_ = " << epollFd_
+      << " fd = " << request->getFd();
   int fd = request->getFd();
   if (timeout > 0) {
     add_timer(request, timeout);
@@ -51,7 +52,8 @@ void Epoll::epoll_add(SP_Channel request, int timeout) {
 
 // 修改描述符状态
 void Epoll::epoll_mod(SP_Channel request, int timeout) {
-  LOG << CurrentThread::tid() << "Epoll::epoll_mod, epollFd_ = " << epollFd_;
+  LOG << CurrentThread::tid() << " Epoll::epoll_mod, epollFd_ = " << epollFd_
+      << " fd = " << request->getFd();
   if (timeout > 0) add_timer(request, timeout);
   int fd = request->getFd();
   // 如果上一个事件不等于当前的事件
@@ -68,7 +70,8 @@ void Epoll::epoll_mod(SP_Channel request, int timeout) {
 
 // 从epoll中删除描述符
 void Epoll::epoll_del(SP_Channel request) {
-  LOG << CurrentThread::tid() << " Epoll::epoll_del, epollFd_ = " << epollFd_;
+  LOG << CurrentThread::tid() << " Epoll::epoll_del, epollFd_ = " << epollFd_
+      << " fd = " << request->getFd();
   int fd = request->getFd();
   struct epoll_event event;
   event.data.fd = fd;
@@ -124,7 +127,8 @@ std::vector<SP_Channel> Epoll::getEventsRequest(int events_num) {
 }
 
 void Epoll::add_timer(SP_Channel request_data, int timeout) {
-  LOG << CurrentThread::tid() << " Epoll::add_timer(), epollFd_ = " << epollFd_;
+  LOG << CurrentThread::tid() << " Epoll::add_timer(), epollFd_ = " << epollFd_
+      << " fd = " << request_data->getFd();
   shared_ptr<HttpData> t = request_data->getHolder();
   if (t)
     timerManager_.addTimer(t, timeout);

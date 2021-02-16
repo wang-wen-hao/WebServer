@@ -63,8 +63,8 @@ EventLoop::~EventLoop() {
   t_loopInThisThread = NULL;
   
 }
-
-void EventLoop::wakeup() {
+// 有一种情况就是在主线程中调用的,去唤醒子线程中的EventLoop,因为子线程的EventLoop里面的epoll也一直等待事件呢,一旦唤醒,就会返回发生的事件了
+void EventLoop::wakeup() { 
   uint64_t one = 1;
   ssize_t n = writen(wakeupFd_, (char*)(&one), sizeof one);
   LOG << CurrentThread::tid() << " EventLoop::wakeup(), threadId_= " << threadId_;
@@ -76,12 +76,13 @@ void EventLoop::wakeup() {
 void EventLoop::handleRead() {
   uint64_t one = 1;
   ssize_t n = readn(wakeupFd_, &one, sizeof one);
-  LOG << CurrentThread::tid() << " EventLoop::handleRead(), threadId_ = " << threadId_
-      << "wakeupFd_ = " << wakeupFd_;
+  LOG << CurrentThread::tid() << " threadId_ = " << threadId_
+      << "wakeupFd_ = " << wakeupFd_ << "EventLoop::handleRead()";
   if (n != sizeof one) {
     LOG << "EventLoop::handleRead() reads " << n << " bytes instead of 8";
   }
   // pwakeupChannel_->setEvents(EPOLLIN | EPOLLET | EPOLLONESHOT);
+  LOG << CurrentThread::tid() << " pwakeupChannel_->setEvents(EPOLLIN | EPOLLET)";
   pwakeupChannel_->setEvents(EPOLLIN | EPOLLET);
 }
 
@@ -96,7 +97,7 @@ void EventLoop::runInLoop(Functor&& cb) {
 
 void EventLoop::queueInLoop(Functor&& cb) {
   LOG << CurrentThread::tid() << " wakeupFd_ = " << wakeupFd_ << " threadId_ = " << threadId_
-        << " EventLoop::queueInLoop";
+        << " EventLoop::queueInLoop"; // 此时,Current tid是主线程的tid,但是threadId_是sub EventLoop 的tid
   {
     MutexLockGuard lock(mutex_);
     pendingFunctors_.emplace_back(std::move(cb)); //这应该就是任务队列吧

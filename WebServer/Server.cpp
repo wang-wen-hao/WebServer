@@ -69,9 +69,10 @@ void Server::handNewConn() {
     setSocketNodelay(accept_fd);
     // setSocketNoLinger(accept_fd);
 
-    shared_ptr<HttpData> req_info(new HttpData(loop, accept_fd));
+    shared_ptr<HttpData> req_info(new HttpData(loop, accept_fd)); //这还是在主线程中
     req_info->getChannel()->setHolder(req_info);
-    loop->queueInLoop(std::bind(&HttpData::newEvent, req_info));
+    loop->queueInLoop(std::bind(&HttpData::newEvent, req_info)); //这个函数是在主线程调用的,但是loop是子EventLoop
   }
+  LOG << CurrentThread::tid() << " acceptChannel_->设置为IN | ET";
   acceptChannel_->setEvents(EPOLLIN | EPOLLET);
 }

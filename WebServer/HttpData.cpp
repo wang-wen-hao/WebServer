@@ -142,7 +142,7 @@ void HttpData::reset() {
     timer_.reset();
   }
 }
-
+// 会将定时器和HttpData类分离,这样定时器过期的时候,不会析构掉HttpData类中的数据
 void HttpData::seperateTimer() {
   LOG << CurrentThread::tid() << " HttpData::seperateTimer()";
   // cout << "seperateTimer" << endl;
@@ -159,7 +159,7 @@ void HttpData::handleRead() {
   do {
     bool zero = false;
     int read_num = readn(fd_, inBuffer_, zero);
-    LOG << "Request: " << inBuffer_;
+    LOG << "inBuffer_: " << inBuffer_;
     if (connectionState_ == H_DISCONNECTING) {
       inBuffer_.clear();
       break;
@@ -272,7 +272,7 @@ void HttpData::handleWrite() {
 
 void HttpData::handleConn() {
   LOG << CurrentThread::tid() << " HttpData::handleConn()";
-  seperateTimer();
+  seperateTimer(); // 这里会暂时先把定时器清除,待会儿进行epoll_mod时再重新设置新的定时器
   __uint32_t &events_ = channel_->getEvents();
   if (!error_ && connectionState_ == H_CONNECTED) {
     if (events_ != 0) {
@@ -314,6 +314,7 @@ void HttpData::handleConn() {
 }
 
 URIState HttpData::parseURI() {
+  LOG << CurrentThread::tid() << " HttpData::parseURI()";
   string &str = inBuffer_;
   string cop = str;
   // 读到完整的请求行再开始解析请求
@@ -391,6 +392,7 @@ URIState HttpData::parseURI() {
 }
 
 HeaderState HttpData::parseHeaders() {
+  LOG << CurrentThread::tid() << " HttpData::parseHeaders()";
   string &str = inBuffer_;
   int key_start = -1, key_end = -1, value_start = -1, value_end = -1;
   int now_read_line_begin = 0;
@@ -479,6 +481,7 @@ HeaderState HttpData::parseHeaders() {
 }
 
 AnalysisState HttpData::analysisRequest() {
+  LOG << CurrentThread::tid() << " HttpData::analysisRequest()";
   if (method_ == METHOD_POST) {
     // ------------------------------------------------------
     // My CV stitching handler which requires OpenCV library
@@ -570,6 +573,7 @@ AnalysisState HttpData::analysisRequest() {
     }
     char *src_addr = static_cast<char *>(mmapRet);
     outBuffer_ += string(src_addr, src_addr + sbuf.st_size);
+    LOG << "outBuffer_: " << outBuffer_;
     ;
     munmap(mmapRet, sbuf.st_size);
     return ANALYSIS_SUCCESS;
@@ -611,5 +615,5 @@ void HttpData::handleClose() {
 void HttpData::newEvent() {
   LOG << CurrentThread::tid() << " HttpData::newEvent()";
   channel_->setEvents(DEFAULT_EVENT);
-  loop_->addToPoller(channel_, DEFAULT_EXPIRED_TIME);
+  loop_->addToPoller(channel_, DEFAULT_EXPIRED_TIME); // 设置事件是2秒, 两秒不处理就删除
 }
